@@ -25,7 +25,7 @@ Users are able to:
 
 ### What I learned
 
-In this project I've used `.nodeName`{:.js} the first time. It was a part of the event delegation logic. I found this event handling pattern very powerful and easy to code.
+In this project I've used `.nodeName` the first time. It was a part of the event delegation logic. I found this event handling pattern very powerful and easy to code.
 
 
 ```js
