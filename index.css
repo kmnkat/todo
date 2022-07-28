@@ -1,0 +1,215 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+
+:root {
+  --pink-dark: #e93b81;
+  --gray-dark: #5b5255;
+  --pink-light: #faa5c2;
+  font-size: 16px;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Karla", sans-serif;
+}
+
+.task-box {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  border: solid var(--pink-light) 1.75rem;
+  min-height: 50%;
+  padding: 1rem;
+}
+
+#input-task {
+  -webkit-appearance: none;
+
+  border: none;
+  border-bottom: 0.5rem var(--pink-dark) solid;
+  color: var(--gray-dark);
+  font-size: 1.5rem;
+  height: 3rem;
+  font-family: "Edu VIC WA NT Beginner", cursive;
+  padding: 0 1rem;
+}
+
+#input-task:focus {
+  -webkit-appearance: none;
+  outline: none;
+  background-color: var(--pink-light);
+}
+
+.name-app {
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  justify-content: center;
+  display: flex;
+  padding: 2rem 1rem;
+  position: relative;
+  right: 7rem;
+  font-weight: 800;
+  margin: 2rem;
+  width: 65%;
+  background-color: var(--pink-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
+.add-task {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
+.list-task-div {
+  display: flex;
+  width: 100%;
+  font-size: 2rem;
+
+  justify-content: space-evenly;
+
+  font-family: "Edu VIC WA NT Beginner", cursive;
+}
+
+.list-task-div ul {
+  margin: 1rem 1rem 1rem 0.5rem;
+
+  width: 100%;
+}
+li {
+  display: grid;
+  grid-template-columns: 4rem auto 3rem;
+
+  width: 100%;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+span {
+  padding-bottom: 1rem;
+  margin-left: 3%;
+  border-bottom: #faa5c2 solid 1px;
+  width: 90%;
+}
+
+.taskDone {
+  -webkit-appearance: none;
+  background-color: white;
+  border: 3px solid black;
+  margin: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  box-shadow: 0.5rem 0.5rem 0 0 var(--pink-dark);
+  display: inline-block;
+  position: relative;
+}
+
+.taskDone:checked {
+  background-color: var(--pink-dark);
+  border: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.taskDone:checked:after {
+  content: "V";
+  font-size: 1.5em;
+  position: absolute;
+  color: white;
+}
+
+.additional-buttons {
+  margin-top: auto;
+}
+
+#add-task-button,
+#clear-tasks-button {
+  background-color: var(--pink-dark);
+  font-size: 1.5rem;
+  color: white;
+  border: none;
+  height: 3.5rem;
+}
+
+#clear-tasks-button {
+  background-color: black;
+}
+.delete-btn {
+  background-color: var(--pink-dark);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: end;
+  margin: 0.5rem;
+}
+.delete-btn:hover,
+#add-task-button:hover,
+#clear-tasks-button:hover {
+  background-color: var(--pink-light);
+}
+
+#add-task-button:hover {
+  background-color: var(--pink-light);
+  border-top: 0.5rem var(--pink-light) solid;
+
+  border-bottom: 0.5rem var(--pink-dark) solid;
+}
+
+@media only screen and (max-width: 790px) {
+  .name-app {
+    color: yellow;
+  }
+  :root {
+    font-size: 14px;
+  }
+  #add-task-button,
+  #clear-tasks-button {
+    font-size: 1rem;
+  }
+  .add-task {
+    grid-template-columns: 2.5fr 1.5fr;
+  }
+  #input-task {
+    padding: 0;
+  }
+  .task-box {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .name-app {
+    color: red;
+  }
+  .task-box {
+    min-height: 25%;
+  }
+  :root {
+    font-size: 12px;
+  }
+  .task-box {
+    width: 70%;
+  }
+}
